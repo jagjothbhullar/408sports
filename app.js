@@ -238,6 +238,13 @@ function loadMoment(moment) {
     // Player not ready yet — queue it for when API loads
     pendingVideoId = moment.youtubeId;
     document.getElementById('no-signal').classList.add('hidden');
+    // Show a loading state instead of "awaiting signal"
+    document.getElementById('no-signal').classList.remove('hidden');
+    document.getElementById('no-signal').querySelector('.no-signal-text').innerHTML = `
+      <span class="signal-icon">📡</span>
+      <p>LOADING...</p>
+      <p class="signal-sub">Tuning in to ${team.name}</p>
+    `;
   } else {
     // No YouTube ID — show moment description
     const noSignal = document.getElementById('no-signal');
