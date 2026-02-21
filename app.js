@@ -523,7 +523,9 @@ window.onYouTubeIframeAPIReady = function() {
         console.log('[408sports] YouTube player ready');
         // Load any video that was queued before player was ready
         if (pendingVideoId) {
-          player.cueVideoById(pendingVideoId);
+          document.getElementById('no-signal').classList.add('hidden');
+          player.loadVideoById(pendingVideoId);
+          startProgress();
           pendingVideoId = null;
         }
       },
