@@ -1,0 +1,17 @@
+{
+  "name": "408sports",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "mkdir -p assets/data && cp data/moments.json assets/data/moments.json",
+    "build": "vite build",
+    "preview": "vite preview",
+    "verify": "node scripts/verify-videos.js",
+    "tweet": "node scripts/generate-tweet.js"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

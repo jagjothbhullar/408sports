@@ -1,0 +1,1265 @@
+/* ========================================================
+   SPORTS 408 — Bay Area Sports TV
+   Light metallic silver/blue · Windows Media Player era
+   ======================================================== */
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #b0b8c8;
+  background-image:
+    linear-gradient(180deg, #c0c8d8 0%, #a8b0c0 40%, #98a0b0 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a2a3a;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 24px 16px;
+}
+
+/* === WINDOW FRAME === */
+.window {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 8px 8px 5px 5px;
+  overflow: hidden;
+  border: 1px solid #7888a0;
+  box-shadow:
+    0 4px 40px rgba(0, 0, 0, 0.35),
+    0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  background: #c0c8d8;
+}
+
+/* === WINDOW CHROME (title bar) === */
+.window-chrome {
+  display: flex;
+  align-items: center;
+  padding: 9px 14px;
+  background: linear-gradient(180deg, #dce0e8 0%, #c8ccd6 40%, #b8bcc8 70%, #c8ccd6 100%);
+  border-bottom: 1px solid #a0a8b8;
+}
+
+.window-dots {
+  display: flex;
+  gap: 7px;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.dot.red    { background: radial-gradient(circle at 35% 35%, #ff7b7b, #e74c3c); }
+.dot.yellow { background: radial-gradient(circle at 35% 35%, #ffe066, #f1c40f); }
+.dot.green  { background: radial-gradient(circle at 35% 35%, #7bff7b, #2ecc71); }
+
+/* === HEADER === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: linear-gradient(180deg, #8098b8 0%, #6a88a8 25%, #5a78a0 55%, #4a6898 100%);
+  border-bottom: 2px solid #3a5888;
+  position: relative;
+}
+
+/* Glossy sheen on top half */
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%);
+  pointer-events: none;
+}
+
+.header-logo h1 {
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-style: italic;
+  font-size: 36px;
+  letter-spacing: 3px;
+  color: #fff;
+  text-shadow:
+    1px 2px 3px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(100, 160, 220, 0.2);
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.four-oh-eight {
+  font-size: 40px;
+}
+
+.header-subtitle {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 3px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.date-badge,
+.time-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.12);
+  color: #dce8f8;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.time-badge {
+  background: rgba(0, 0, 0, 0.2);
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 14px;
+}
+
+/* === THIS DAY BANNER === */
+.day-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 24px;
+  background: linear-gradient(90deg, #2a5a9a 0%, #3a78c0 40%, #4a88cc 60%, #3a78c0 80%, #2a5a9a 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Glossy sheen */
+.day-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.banner-icon {
+  font-size: 16px;
+}
+
+/* === FRAME LINE === */
+.frame-line {
+  height: 3px;
+  background: linear-gradient(180deg, #d8dce8 0%, #a8b0c0 50%, #c0c8d8 100%);
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  display: flex;
+  min-height: 400px;
+  background: #c0c8d8;
+}
+
+/* === PLAYLIST SIDEBAR === */
+.playlist-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  background: #c8d0de;
+  border-right: 2px solid #a0a8b8;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Channel selector dropdown */
+.channel-selector {
+  padding: 10px 12px;
+  background: linear-gradient(180deg, #b8c0d0 0%, #a8b0c2 100%);
+  border-bottom: 1px solid #98a0b0;
+  flex-shrink: 0;
+}
+
+#channel-select {
+  width: 100%;
+  padding: 7px 10px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+  background: linear-gradient(180deg, #3a6898 0%, #2a5080 50%, #1a4070 100%);
+  border: 1px solid #1a3050;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+
+#channel-select:hover {
+  background: linear-gradient(180deg, #4a78a8 0%, #3a6090 50%, #2a5080 100%);
+}
+
+#channel-select:focus {
+  outline: none;
+  border-color: #4a90d8;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.25),
+    0 0 0 2px rgba(74, 144, 216, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+#channel-select option {
+  background: #1a3050;
+  color: #fff;
+  padding: 4px 8px;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+/* Scrollable moments list */
+.playlist-scroll {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* Scrollbar */
+.playlist-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.playlist-scroll::-webkit-scrollbar-track {
+  background: #b0b8c8;
+}
+.playlist-scroll::-webkit-scrollbar-thumb {
+  background: #8898a8;
+  border-radius: 4px;
+}
+
+/* Playlist item */
+.playlist-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #b0b8c8;
+  gap: 10px;
+  transition: background 0.12s;
+}
+
+.playlist-item:hover {
+  background: rgba(58, 120, 192, 0.08);
+}
+
+.playlist-item.active {
+  background: rgba(58, 120, 192, 0.12);
+  box-shadow: inset 3px 0 0 #3a78c0;
+}
+
+/* Year badge */
+.year-badge {
+  display: inline-block;
+  padding: 3px 7px;
+  border: 2px solid #4a6890;
+  border-radius: 3px;
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-size: 16px;
+  color: #1a3050;
+  background: rgba(255, 255, 255, 0.6);
+  line-height: 1;
+  flex-shrink: 0;
+  text-align: center;
+  min-width: 46px;
+}
+
+/* Team logo (placeholder circle) */
+.team-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 8px;
+  font-weight: bold;
+  flex-shrink: 0;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Item text */
+.item-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.item-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #1a2a3a;
+  line-height: 1.3;
+}
+
+.item-subtitle {
+  font-size: 10px;
+  color: #5a6a7a;
+  margin-top: 3px;
+  letter-spacing: 0.3px;
+}
+
+/* NOW PLAYING badge */
+.now-indicator {
+  display: inline-block;
+  padding: 3px 10px;
+  background: linear-gradient(180deg, #f0a830 0%, #e09020 100%);
+  border-radius: 3px;
+  color: #fff;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-top: 6px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Empty playlist */
+.playlist-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 300px;
+  color: #6a7a8a;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.playlist-empty .empty-icon {
+  font-size: 40px;
+  margin-bottom: 14px;
+  opacity: 0.6;
+}
+
+.playlist-empty p {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.playlist-empty .empty-hint {
+  font-size: 10px;
+  color: #8a9aaa;
+  margin-top: 6px;
+}
+
+/* === VIDEO PLAYER AREA === */
+.player-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #c0c8d8;
+  min-width: 0;
+}
+
+/* === CRT TELEVISION (wraps the video player) === */
+.crt-tv {
+  padding: 14px 14px 0;
+}
+
+/* TV Body — chunky 1990s plastic housing */
+.crt-tv-body {
+  background:
+    linear-gradient(180deg,
+      #5a5a5a 0%,
+      #4d4d4d 2%,
+      #424242 5%,
+      #3a3a3a 10%,
+      #333    20%,
+      #2d2d2d 40%,
+      #282828 60%,
+      #222    80%,
+      #1d1d1d 95%,
+      #181818 100%);
+  border-radius: 22px;
+  border: 3px solid #555;
+  border-top: 4px solid #666;
+  border-bottom: 5px solid #111;
+  border-left: 4px solid #4a4a4a;
+  border-right: 4px solid #222;
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.6),
+    0 16px 40px rgba(0, 0, 0, 0.4),
+    0 2px 0 rgba(255, 255, 255, 0.08),
+    inset 0 2px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.7),
+    inset 3px 0 0 rgba(255, 255, 255, 0.06),
+    inset -3px 0 0 rgba(0, 0, 0, 0.25);
+  padding: 28px 28px 0 28px;
+}
+
+/* Screen well — the inset channel that holds the glass */
+.crt-screen-well {
+  background: #060606;
+  border-radius: 12px;
+  padding: 8px;
+  border: 2px solid #1a1a1a;
+  box-shadow:
+    inset 0 6px 18px rgba(0, 0, 0, 0.95),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.04),
+    0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* CRT Glass — the curved screen surface */
+.crt-glass {
+  position: relative;
+  border-radius: 6px / 8px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Video container inside the glass */
+.crt-glass .video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* CRT Effects — scanlines + vignette + phosphor flicker, all on one layer */
+.crt-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 5;
+  /* Scanlines */
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+  mix-blend-mode: multiply;
+}
+
+/* Vignette (dark edges = tube curvature) */
+.crt-effects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+/* Phosphor flicker */
+.crt-effects::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(130, 255, 130, 0.03);
+  animation: crt-flicker 0.1s infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes crt-flicker {
+  0%   { opacity: 0.95; }
+  100% { opacity: 1; }
+}
+
+/* Bottom panel — brand label + knobs, inside the TV body */
+.crt-bottom-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 18px;
+}
+
+.crt-brand {
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-size: 15px;
+  color: rgba(200, 195, 185, 0.55);
+  letter-spacing: 4px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.crt-brand em {
+  font-size: 18px;
+}
+
+.crt-knobs {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.crt-led {
+  width: 8px;
+  height: 8px;
+  background: #00ee44;
+  border-radius: 50%;
+  border: 1px solid #006622;
+  box-shadow: 0 0 8px #00dd44, 0 0 18px rgba(0, 221, 68, 0.45);
+  animation: led-glow 3s ease-in-out infinite;
+}
+
+@keyframes led-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.crt-knob {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #777, #555 25%, #3a3a3a 50%, #222 75%, #151515);
+  border: 2px solid #444;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.8),
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    inset 0 2px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.crt-knob.small {
+  width: 20px;
+  height: 20px;
+}
+
+/* === CHANNEL STRIP (VCR-style channel selector) === */
+.crt-channel-strip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #030306;
+  border-radius: 8px;
+  border: 2px solid #4a4a4a;
+  box-shadow:
+    inset 0 3px 10px rgba(0, 0, 0, 0.95),
+    0 2px 0 rgba(255, 255, 255, 0.08),
+    0 0 16px rgba(0, 221, 68, 0.1);
+  padding: 6px 8px;
+}
+
+.ch-display {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00dd44;
+  letter-spacing: 2.5px;
+  padding: 6px 18px;
+  text-shadow: 0 0 12px rgba(0, 221, 68, 0.8), 0 0 30px rgba(0, 221, 68, 0.4);
+  white-space: nowrap;
+  min-width: 200px;
+  text-align: center;
+}
+
+.ch-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  background: radial-gradient(circle at 30% 30%, #888, #666 25%, #444 50%, #2a2a2a 75%, #1a1a1a);
+  color: rgba(220, 215, 205, 0.9);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.8),
+    0 1px 1px rgba(0, 0, 0, 0.4),
+    inset 0 2px 2px rgba(255, 255, 255, 0.2);
+  transition: all 0.12s;
+}
+
+.ch-btn:hover {
+  border-color: #00dd44;
+  color: #00dd44;
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.8),
+    0 0 14px rgba(0, 221, 68, 0.5),
+    inset 0 2px 2px rgba(255, 255, 255, 0.2);
+}
+
+.ch-btn:active {
+  transform: scale(0.92);
+}
+
+/* === NOW PLAYING OVERLAY (chyron inside the CRT screen) === */
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 20%,
+    rgba(0, 0, 0, 0.7) 55%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  padding: 36px 16px 12px;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.video-overlay.visible {
+  opacity: 1;
+}
+
+/* VHS-style NOW PLAYING */
+.overlay-np {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 10px;
+  color: rgba(100, 255, 150, 0.85);
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(100, 255, 150, 0.5);
+}
+
+.rec-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #ff3333;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #ff3333, 0 0 12px rgba(255, 50, 50, 0.4);
+  animation: rec-blink 1.2s ease-in-out infinite;
+}
+
+@keyframes rec-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.15; }
+}
+
+.overlay-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 8px;
+}
+
+.overlay-info {
+  flex: 1;
+}
+
+.overlay-score {
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  line-height: 1.1;
+}
+
+.overlay-game {
+  display: inline-block;
+  font-size: 11px;
+  color: #c8d8f8;
+  background: rgba(58, 100, 180, 0.45);
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin-top: 6px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.overlay-yt {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+
+.overlay-yt:hover {
+  color: #fff;
+}
+
+/* No-signal state */
+.no-signal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  background: #080810;
+  transition: opacity 0.3s;
+}
+
+.no-signal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.static-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    rgba(74, 144, 217, 0.015) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  animation: static-scroll 8s linear infinite;
+}
+
+@keyframes static-scroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+.no-signal-text {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.signal-icon {
+  font-size: 44px;
+  display: block;
+  margin-bottom: 16px;
+  animation: signal-pulse 2s ease-in-out infinite;
+}
+
+@keyframes signal-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.9; }
+}
+
+.no-signal-text p {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #3a4a5a;
+}
+
+.no-signal-text .signal-sub {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #2a3540;
+  margin-top: 8px;
+}
+
+/* No-embed card (NFL-blocked content) */
+.no-embed-card {
+  text-align: center;
+  max-width: 400px;
+  padding: 10px 20px;
+}
+
+.no-embed-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.no-embed-title {
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+}
+
+.no-embed-sub {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 12px;
+  color: rgba(100, 255, 150, 0.7);
+  letter-spacing: 2px;
+  margin-top: 6px;
+  text-shadow: 0 0 6px rgba(100, 255, 150, 0.3);
+}
+
+.no-embed-desc {
+  font-size: 12px;
+  color: #7a8a9a;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.no-embed-yt-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 28px;
+  background: linear-gradient(180deg, #cc0000 0%, #aa0000 50%, #880000 100%);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid #660000;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5), 0 0 12px rgba(200, 0, 0, 0.2);
+  transition: all 0.15s;
+}
+
+.no-embed-yt-btn:hover {
+  background: linear-gradient(180deg, #dd2222 0%, #bb1111 50%, #990000 100%);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5), 0 0 18px rgba(200, 0, 0, 0.35);
+}
+
+/* === TRANSPORT CONTROLS (inside TV body) === */
+.transport-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  margin: 0 4px;
+  background: linear-gradient(180deg, #1a1a1a 0%, #151515 50%, #111 100%);
+  border-top: 1px solid #333;
+  border-radius: 0 0 4px 4px;
+}
+
+.transport-play {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  background: radial-gradient(circle at 30% 30%, #777, #555 25%, #333 55%, #1a1a1a 80%);
+  color: rgba(220, 215, 205, 0.9);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  transition: all 0.12s;
+}
+
+.transport-play:hover {
+  border-color: #00dd44;
+  color: #00dd44;
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.7),
+    0 0 10px rgba(0, 221, 68, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.transport-play:active {
+  transform: scale(0.93);
+}
+
+.transport-sep {
+  width: 1px;
+  height: 20px;
+  background: #333;
+  margin: 0 2px;
+}
+
+.transport-skip {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 50%, #1e1e1e 100%);
+  color: rgba(200, 195, 185, 0.7);
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.12s;
+}
+
+.transport-skip:hover {
+  border-color: #00dd44;
+  color: #00dd44;
+}
+
+/* Progress bar */
+.progress-wrap {
+  flex: 1;
+  position: relative;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 5px;
+  background: #0a0a0a;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid #333;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00aa33 0%, #00dd44 100%);
+  border-radius: 3px;
+  transition: width 0.5s linear;
+  position: relative;
+  box-shadow: 0 0 6px rgba(0, 221, 68, 0.4);
+}
+
+.transport-icon,
+.transport-text-btn {
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 50%, #1e1e1e 100%);
+  color: rgba(200, 195, 185, 0.7);
+  cursor: pointer;
+  padding: 5px 8px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.12s;
+}
+
+.transport-icon:hover,
+.transport-text-btn:hover {
+  border-color: #00dd44;
+  color: #00dd44;
+}
+
+.transport-text-btn {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.transport-text-btn.active {
+  background: linear-gradient(180deg, #1a4a1a 0%, #0a3a0a 50%, #062a06 100%);
+  color: #00dd44;
+  border-color: #00aa33;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 8px rgba(0, 221, 68, 0.2);
+}
+
+/* === RANDOM MOMENTS BAR === */
+.random-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(180deg, #c4c8d4 0%, #b8bcc8 100%);
+}
+
+.random-btn {
+  padding: 8px 16px;
+  border: 1px solid #3a5888;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #5a90c8 0%, #3a70a8 50%, #2a6098 100%);
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.15s;
+}
+
+.random-btn:hover {
+  background: linear-gradient(180deg, #6aa0d8 0%, #4a80b8 50%, #3a70a8 100%);
+}
+
+.random-btn:active {
+  transform: scale(0.98);
+}
+
+.random-cards {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  overflow-x: auto;
+}
+
+.random-cards::-webkit-scrollbar {
+  height: 4px;
+}
+.random-cards::-webkit-scrollbar-thumb {
+  background: #8898a8;
+  border-radius: 2px;
+}
+
+/* Random card */
+.random-card {
+  min-width: 180px;
+  height: 80px;
+  border-radius: 4px;
+  border: 1px solid #8898a8;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.random-card:hover {
+  border-color: #4a78a8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 7px 10px;
+}
+
+.card-year-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 2px;
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-size: 14px;
+  color: #1a2a3a;
+  align-self: flex-start;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.card-team-logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7px;
+  color: #fff;
+  font-weight: bold;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-title {
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-player {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Share section */
+.share-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.share-label {
+  font-size: 10px;
+  font-weight: bold;
+  color: #4a5a6a;
+  letter-spacing: 1px;
+}
+
+.share-icons {
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.share-tag {
+  font-size: 10px;
+  color: #3a68a0;
+  font-weight: bold;
+}
+
+/* === FOOTER === */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 18px;
+  background: linear-gradient(180deg, #a8b0c0 0%, #98a0b0 100%);
+  border-top: 1px solid #b8c0d0;
+}
+
+.footer-text {
+  font-size: 9px;
+  color: #4a5a6a;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.footer-icons {
+  font-size: 14px;
+  letter-spacing: 6px;
+  color: #4a5a6a;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  body {
+    padding: 8px;
+  }
+
+  .window {
+    border-radius: 4px;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .playlist-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #a0a8b8;
+    max-height: 280px;
+  }
+
+  .channel-selector {
+    padding: 8px 10px;
+  }
+
+  .playlist-scroll {
+    max-height: 220px;
+  }
+
+  .random-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .random-btn {
+    text-align: center;
+  }
+
+  .share-section {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0;
+  }
+
+  .header-logo h1 {
+    font-size: 26px;
+  }
+
+  .four-oh-eight {
+    font-size: 30px;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .crt-bottom-panel {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .ch-display {
+    font-size: 11px;
+    min-width: 130px;
+    padding: 4px 10px;
+  }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPORTS 408 — Bay Area Sports TV</title>
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="This Day in the 408 — Bay Area Sports History">
+  <meta property="og:description" content="Relive the greatest moments in Bay Area sports history. Warriors, Giants, 49ers, Sharks, Cal, Stanford & more.">
+  <meta property="og:url" content="https://sports408.tv">
+  <meta property="og:site_name" content="SPORTS 408">
+  <meta property="og:image" content="https://sports408.tv/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Sports408">
+  <meta name="twitter:title" content="This Day in the 408 — Bay Area Sports History">
+  <meta name="twitter:description" content="Relive the greatest moments in Bay Area sports history. Warriors, Giants, 49ers, Sharks, Cal, Stanford & more.">
+  <meta name="twitter:image" content="https://sports408.tv/og-image.png">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏟️</text></svg>">
+</head>
+<body>
+  <div class="window">
+    <!-- Window Chrome -->
+    <div class="window-chrome">
+      <div class="window-dots">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="header-logo">
+        <h1><em>SPORTS</em><em class="four-oh-eight">408</em></h1>
+        <p class="header-subtitle">BAY AREA SPORTS TV</p>
+      </div>
+      <div class="header-right">
+        <span class="date-badge" id="current-date"></span>
+        <span class="time-badge" id="current-time"></span>
+      </div>
+    </div>
+
+    <!-- This Day Banner -->
+    <div class="day-banner">
+      <span class="banner-icon">📺</span>
+      <span class="banner-text">THIS DAY IN THE 408</span>
+    </div>
+
+    <!-- Decorative frame line -->
+    <div class="frame-line"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Playlist Sidebar -->
+      <div class="playlist-sidebar">
+        <div class="channel-selector">
+          <select id="channel-select"></select>
+        </div>
+        <div class="playlist-scroll" id="playlist"></div>
+      </div>
+
+      <!-- Video Player — Retro CRT TV -->
+      <div class="player-area">
+        <div class="crt-tv">
+          <!-- TV Body (the plastic/wood housing) -->
+          <div class="crt-tv-body">
+            <!-- Screen well (inset area holding the glass) -->
+            <div class="crt-screen-well">
+              <!-- The glass screen -->
+              <div class="crt-glass">
+                <!-- Video lives here -->
+                <div class="video-container" id="video-container">
+                  <div id="youtube-player"></div>
+                  <!-- Now Playing chyron -->
+                  <div class="video-overlay" id="video-overlay">
+                    <span class="overlay-np"><span class="rec-dot"></span> NOW PLAYING</span>
+                    <div class="overlay-bottom">
+                      <div class="overlay-info">
+                        <div class="overlay-score" id="overlay-score"></div>
+                        <div class="overlay-game" id="overlay-game"></div>
+                      </div>
+                      <a class="overlay-yt" id="overlay-yt" href="#" target="_blank" rel="noopener">Watch on <strong>YouTube</strong></a>
+                    </div>
+                  </div>
+                  <!-- No signal -->
+                  <div class="no-signal" id="no-signal">
+                    <div class="static-lines"></div>
+                    <div class="no-signal-text">
+                      <span class="signal-icon">📡</span>
+                      <p>AWAITING SIGNAL</p>
+                      <p class="signal-sub">Select a highlight from the playlist</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- CRT glass effects layered over video -->
+                <div class="crt-effects"></div>
+              </div>
+            </div>
+            <!-- Transport Controls (inside TV body) -->
+            <div class="transport-controls">
+              <button class="transport-play" id="btn-play" title="Play/Pause">▶</button>
+              <span class="transport-sep"></span>
+              <button class="transport-skip" id="btn-next" title="Next">⏭</button>
+              <div class="progress-wrap">
+                <div class="progress-track">
+                  <div class="progress-fill" id="progress-fill"></div>
+                </div>
+              </div>
+              <button class="transport-icon" id="btn-volume" title="Volume">🔊</button>
+              <button class="transport-text-btn" id="btn-hd" title="HD Quality">HD</button>
+              <button class="transport-icon" id="btn-fullscreen" title="Fullscreen">⛶</button>
+            </div>
+            <!-- Bottom panel: brand + channel strip + knobs -->
+            <div class="crt-bottom-panel">
+              <span class="crt-brand">SPORTS <em>408</em></span>
+              <div class="crt-channel-strip">
+                <button class="ch-btn" id="ch-prev">◀</button>
+                <span class="ch-display" id="ch-display">CH 1 · WARRIORS</span>
+                <button class="ch-btn" id="ch-next">▶</button>
+              </div>
+              <div class="crt-knobs">
+                <span class="crt-led"></span>
+                <span class="crt-knob"></span>
+                <span class="crt-knob small"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative frame line -->
+    <div class="frame-line"></div>
+
+    <!-- Random Moments -->
+    <div class="random-bar">
+      <button class="random-btn" id="btn-random">&#187; RANDOM MOMENTS</button>
+      <div class="random-cards" id="random-cards"></div>
+      <div class="share-section">
+        <span class="share-label">SHARE:</span>
+        <span class="share-icons">🐦 🔗</span>
+        <span class="share-tag">#Sports408</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span class="footer-text">ALL VIDEO CONTENT PROPERTY OF RESPECTIVE OWNERS &middot; EST. 2025 &middot; BAY AREA, CA</span>
+      <span class="footer-icons">🐦 ▶</span>
+    </div>
+  </div>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

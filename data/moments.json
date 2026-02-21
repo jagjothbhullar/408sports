@@ -1,0 +1,350 @@
+{
+  "02-20": [
+    {
+      "id": "curry-asg-mvp-2022",
+      "year": 2022,
+      "team": "warriors",
+      "opponent": "Team Durant",
+      "title": "NBA ALL-STAR GAME",
+      "subtitle": "ALL-STAR GAME MVP \u00b7 CLEVELAND",
+      "score": "TEAM LEBRON 163 \u2014 TEAM DURANT 160",
+      "description": "Stephen Curry scores 50 points on 16 three-pointers \u2014 both All-Star Game records \u2014 to win the inaugural Kobe Bryant MVP Award in Cleveland.",
+      "youtubeId": "oJiNAR21gxA",
+      "player": "Stephen Curry"
+    },
+    {
+      "id": "warriors-clippers-73win-2016",
+      "year": 2016,
+      "team": "warriors",
+      "opponent": "Clippers",
+      "title": "WARRIORS vs CLIPPERS",
+      "subtitle": "73-9 SEASON \u00b7 GAME 54",
+      "score": "WARRIORS 115 \u2014 CLIPPERS 112",
+      "description": "Klay Thompson scores 32, Draymond Green records a triple-double (18-11-10), and the Warriors improve to 49-5 during their record-breaking 73-win season.",
+      "youtubeId": "vOL06UpIZjY",
+      "player": "Klay Thompson"
+    },
+    {
+      "id": "mays-record-contract-1963",
+      "year": 1963,
+      "team": "giants",
+      "opponent": "",
+      "title": "WILLIE MAYS MAKES HISTORY",
+      "subtitle": "RECORD $100,000 CONTRACT",
+      "score": "",
+      "description": "Willie Mays signs a record $100,000 contract with the San Francisco Giants, becoming the highest-paid player in Major League Baseball history.",
+      "youtubeId": "zr2KX57tpZE",
+      "player": "Willie Mays"
+    }
+  ],
+  "02-21": [
+    {
+      "id": "stadium-series-2015",
+      "year": 2015,
+      "team": "sharks",
+      "opponent": "Kings",
+      "title": "SHARKS vs KINGS",
+      "subtitle": "NHL STADIUM SERIES \u00b7 LEVI'S STADIUM",
+      "score": "KINGS 2 \u2014 SHARKS 1",
+      "description": "The first outdoor NHL game in the Bay Area draws 70,205 fans to Levi's Stadium in Santa Clara for the 2015 Coors Light Stadium Series.",
+      "youtubeId": "xGBsRfkFS6o",
+      "player": "Brent Burns"
+    },
+    {
+      "id": "curry-10-threes-kings-2019",
+      "year": 2019,
+      "team": "warriors",
+      "opponent": "Kings",
+      "title": "WARRIORS vs KINGS",
+      "subtitle": "REGULAR SEASON \u00b7 ORACLE ARENA",
+      "score": "WARRIORS 125 \u2014 KINGS 123",
+      "description": "Stephen Curry drains 10 three-pointers and scores 36 points as the Warriors hold off the Kings. Kevin Durant adds 28 points and 7 blocks.",
+      "youtubeId": "jVRZnsia454",
+      "player": "Stephen Curry"
+    }
+  ],
+  "02-22": [
+    {
+      "id": "warriors-fastest-50-wins-2016",
+      "year": 2016,
+      "team": "warriors",
+      "opponent": "Hawks",
+      "title": "WARRIORS vs HAWKS",
+      "subtitle": "73-9 SEASON \u00b7 FASTEST TO 50 WINS",
+      "score": "WARRIORS 102 \u2014 HAWKS 92",
+      "description": "Curry scores 36 and Klay adds 27 as the Warriors become the fastest team in NBA history to reach 50 wins \u2014 doing it in just 55 games, beating the '96 Bulls' record.",
+      "youtubeId": "wfPQwd1b4E0",
+      "player": "Stephen Curry"
+    },
+    {
+      "id": "quakes-rsl-opener-2025",
+      "year": 2025,
+      "team": "earthquakes",
+      "opponent": "Real Salt Lake",
+      "title": "EARTHQUAKES vs RSL",
+      "subtitle": "MLS SEASON OPENER \u00b7 PAYPAL PARK",
+      "score": "QUAKES 4 \u2014 RSL 0",
+      "description": "Cristian Espinoza dishes 3 assists as the Earthquakes demolish Real Salt Lake 4-0 in the home opener, kicking off the Bruce Arena era in style.",
+      "youtubeId": "5HXOZ_kYHLs",
+      "player": "Cristian Espinoza"
+    },
+    {
+      "id": "santa-clara-23-threes-2025",
+      "year": 2025,
+      "team": "santaclara",
+      "opponent": "Washington State",
+      "title": "SANTA CLARA vs WSU",
+      "subtitle": "WCC BASKETBALL \u00b7 NCAA RECORD",
+      "score": "SCU 109 \u2014 WSU 77",
+      "description": "The Broncos set a WCC record and tie the NCAA Division I road record with 23 three-pointers (23-of-38) in a 32-point blowout at Washington State.",
+      "youtubeId": "CshzkXQH4xs",
+      "player": "Carlos Stewart Jr."
+    }
+  ],
+  "02-23": [
+    {
+      "id": "iguodala-jersey-retirement-2025",
+      "year": 2025,
+      "team": "warriors",
+      "opponent": "Mavericks",
+      "title": "IGUODALA JERSEY RETIREMENT",
+      "subtitle": "NO. 9 RETIRED \u00b7 CHASE CENTER",
+      "score": "WARRIORS 126 \u2014 MAVERICKS 102",
+      "description": "The Warriors retire Andre Iguodala's No. 9 \u2014 the first jersey retirement at Chase Center. Curry scores 30 and Jimmy Butler debuts with 18 in a blowout win over Dallas.",
+      "youtubeId": "gXCSIJ49J3w",
+      "player": "Andre Iguodala"
+    }
+  ],
+  "02-24": [
+    {
+      "id": "curry-42-heat-2016",
+      "year": 2016,
+      "team": "warriors",
+      "opponent": "Heat",
+      "title": "WARRIORS vs HEAT",
+      "subtitle": "73-9 SEASON \u00b7 13 LEAD CHANGES IN 4TH QTR",
+      "score": "WARRIORS 118 \u2014 HEAT 112",
+      "description": "Curry scores 42 and hits the go-ahead three with 38 seconds left. Klay drops 15 consecutive Warriors points in the 4th quarter on his way to 33. Warriors improve to 51-5.",
+      "youtubeId": "H7fiFmuWrdo",
+      "player": "Stephen Curry"
+    },
+    {
+      "id": "pavelski-hat-trick-2019",
+      "year": 2019,
+      "team": "sharks",
+      "opponent": "Red Wings",
+      "title": "SHARKS vs RED WINGS",
+      "subtitle": "REGULAR SEASON \u00b7 HAT TRICK",
+      "score": "SHARKS 5 \u2014 RED WINGS 3",
+      "description": "Captain Joe Pavelski scores his fifth career hat trick \u2014 including two goals 55 seconds apart \u2014 as the Sharks rally from a 3-1 deficit to beat Detroit.",
+      "youtubeId": "fb9PTorbLO0",
+      "player": "Joe Pavelski"
+    }
+  ],
+  "02-25": [
+    {
+      "id": "warriors-3000th-win-2025",
+      "year": 2025,
+      "team": "warriors",
+      "opponent": "Hornets",
+      "title": "WARRIORS vs HORNETS",
+      "subtitle": "3,000TH FRANCHISE WIN",
+      "score": "WARRIORS 128 \u2014 HORNETS 92",
+      "description": "The Warriors demolish Charlotte to become the fifth NBA franchise to reach 3,000 regular-season wins, joining the Lakers, Celtics, Knicks, and 76ers.",
+      "youtubeId": "vfBKwx1XGhI",
+      "player": "Buddy Hield"
+    },
+    {
+      "id": "marleau-jersey-retirement-2023",
+      "year": 2023,
+      "team": "sharks",
+      "opponent": "Blackhawks",
+      "title": "MARLEAU NO. 12 RETIRED",
+      "subtitle": "FIRST JERSEY RETIREMENT IN SHARKS HISTORY",
+      "score": "BLACKHAWKS 4 \u2014 SHARKS 3 (SO)",
+      "description": "Patrick Marleau's No. 12 becomes the first jersey retired in Sharks franchise history. San Jose declares it 'Patrick Marleau Day.' Barry Bonds and Chris Mullin join him on ice.",
+      "youtubeId": "pjzRo2xhkPs",
+      "player": "Patrick Marleau"
+    }
+  ],
+  "02-27": [
+    {
+      "id": "curry-56-magic-2025",
+      "year": 2025,
+      "team": "warriors",
+      "opponent": "Magic",
+      "title": "WARRIORS vs MAGIC",
+      "subtitle": "CURRY ERUPTS FOR 56",
+      "score": "WARRIORS 121 \u2014 MAGIC 115",
+      "description": "Curry explodes for 56 points (12-of-19 from three, 12-of-12 FT) to lead a comeback from 14 down. His 14th career 50-point game and record 26th with 10+ threes.",
+      "youtubeId": "Ko-aQP2jtUg",
+      "player": "Stephen Curry"
+    },
+    {
+      "id": "curry-ot-gamewinner-thunder-2016",
+      "year": 2016,
+      "team": "warriors",
+      "opponent": "Thunder",
+      "title": "WARRIORS vs THUNDER",
+      "subtitle": "73-9 SEASON \u00b7 32-FOOT GAME-WINNER",
+      "score": "WARRIORS 121 \u2014 THUNDER 118 (OT)",
+      "description": "Curry scores 46 with 12 threes (tying the NBA record), then launches a 32-foot pull-up three with 0.6 seconds left in overtime for the win. One of the greatest regular-season games ever.",
+      "youtubeId": "GEMVGHoenXM",
+      "player": "Stephen Curry"
+    }
+  ],
+  "03-01": [
+    {
+      "id": "quakes-skc-2025",
+      "year": 2025,
+      "team": "earthquakes",
+      "opponent": "Sporting KC",
+      "title": "QUAKES vs SPORTING KC",
+      "subtitle": "MLS 2025 \u00b7 ROAD WIN",
+      "score": "QUAKES 2 \u2014 SKC 1",
+      "description": "Chicho Arango and Josef Martinez each score as the Earthquakes win at Children's Mercy Park, starting the Bruce Arena era 2-0.",
+      "youtubeId": "85c-xm5LID8",
+      "player": "Josef Martinez"
+    }
+  ],
+  "01-10": [
+    {
+      "id": "the-catch-1982-real",
+      "year": 1982,
+      "team": "49ers",
+      "opponent": "Cowboys",
+      "title": "49ERS vs COWBOYS",
+      "subtitle": "NFC CHAMPIONSHIP",
+      "score": "49ERS 28 \u2014 COWBOYS 27",
+      "description": "Dwight Clark makes 'The Catch' \u2014 Joe Montana's 6-yard TD pass in the final minute to win the NFC Championship and send the 49ers to their first Super Bowl.",
+      "youtubeId": "xLsFSsHnoxM",
+      "player": "Dwight Clark",
+      "noEmbed": true
+    }
+  ],
+  "10-29": [
+    {
+      "id": "giants-ws-2014-gm7",
+      "year": 2014,
+      "team": "giants",
+      "opponent": "Royals",
+      "title": "GIANTS vs ROYALS",
+      "subtitle": "WORLD SERIES \u00b7 GAME 7",
+      "score": "GIANTS 3 \u2014 ROYALS 2",
+      "description": "Madison Bumgarner throws 5 innings of scoreless relief as the Giants win their third World Series title in five years.",
+      "youtubeId": "vPw-Om2Xf5I",
+      "player": "Madison Bumgarner"
+    }
+  ],
+  "11-01": [
+    {
+      "id": "giants-ws-2010-gm4",
+      "year": 2010,
+      "team": "giants",
+      "opponent": "Rangers",
+      "title": "GIANTS vs RANGERS",
+      "subtitle": "WORLD SERIES \u00b7 GAME 4",
+      "score": "GIANTS 4 \u2014 RANGERS 0",
+      "description": "Bumgarner's masterful 8 scoreless innings put the Giants one win from the title.",
+      "youtubeId": "bF4l-eDgHjc",
+      "player": "Madison Bumgarner"
+    }
+  ],
+  "05-11": [
+    {
+      "id": "baron-davis-dunk-2007",
+      "year": 2007,
+      "team": "warriors",
+      "opponent": "Jazz",
+      "title": "WARRIORS vs JAZZ",
+      "subtitle": "WCSF \u00b7 GAME 3",
+      "score": "",
+      "description": "Baron Davis posterizes Andrei Kirilenko with one of the most ferocious dunks in NBA playoff history during the 'We Believe' run.",
+      "youtubeId": "tYpwjB0IzoU",
+      "player": "Baron Davis"
+    }
+  ],
+  "06-16": [
+    {
+      "id": "warriors-title-2022",
+      "year": 2022,
+      "team": "warriors",
+      "opponent": "Celtics",
+      "title": "WARRIORS vs CELTICS",
+      "subtitle": "NBA FINALS \u00b7 GAME 6",
+      "score": "WARRIORS 103 \u2014 CELTICS 90",
+      "description": "Steph Curry scores 34 as the Warriors clinch their 4th championship. Curry wins his first Finals MVP.",
+      "youtubeId": "AOYACk7m7Fk",
+      "player": "Stephen Curry"
+    },
+    {
+      "id": "warriors-title-2015",
+      "year": 2015,
+      "team": "warriors",
+      "opponent": "Cavaliers",
+      "title": "WARRIORS vs CAVALIERS",
+      "subtitle": "NBA FINALS \u00b7 GAME 6",
+      "score": "WARRIORS 105 \u2014 CAVS 97",
+      "description": "The Warriors clinch the NBA Championship \u2014 their first title in 40 years.",
+      "youtubeId": "DwWndPQLkEo",
+      "player": "Stephen Curry"
+    }
+  ],
+  "06-10": [
+    {
+      "id": "curry-43-2022",
+      "year": 2022,
+      "team": "warriors",
+      "opponent": "Celtics",
+      "title": "WARRIORS vs CELTICS",
+      "subtitle": "NBA FINALS \u00b7 GAME 4",
+      "score": "WARRIORS 107 \u2014 CELTICS 97",
+      "description": "Steph Curry erupts for 43 points in a must-win Game 4, keeping the Warriors alive in the Finals.",
+      "youtubeId": "B-5StlRZInc",
+      "player": "Stephen Curry"
+    }
+  ],
+  "06-19": [
+    {
+      "id": "warriors-cavs-2016-gm7",
+      "year": 2016,
+      "team": "warriors",
+      "opponent": "Cavaliers",
+      "title": "WARRIORS vs CAVALIERS",
+      "subtitle": "NBA FINALS \u00b7 GAME 7",
+      "score": "CAVS 93 \u2014 WARRIORS 89",
+      "description": "The epic Game 7 where LeBron and the Cavaliers complete the first 3-1 comeback in Finals history.",
+      "youtubeId": "EoVTttvKfRs",
+      "player": "Stephen Curry"
+    }
+  ],
+  "11-20": [
+    {
+      "id": "the-play-1982",
+      "year": 1982,
+      "team": "cal",
+      "opponent": "Stanford",
+      "title": "CAL vs STANFORD",
+      "subtitle": "THE BIG GAME",
+      "score": "CAL 25 \u2014 STANFORD 20",
+      "description": "'The Play' \u2014 Cal returns the kickoff through the Stanford band with five laterals for the most famous play in college football history.",
+      "youtubeId": "1Ka2TWrAdqU",
+      "player": "Kevin Moen"
+    }
+  ],
+  "01-22": [
+    {
+      "id": "49ers-saints-2012",
+      "year": 2012,
+      "team": "49ers",
+      "opponent": "Saints",
+      "title": "49ERS vs SAINTS",
+      "subtitle": "NFC DIVISIONAL ROUND",
+      "score": "49ERS 36 \u2014 SAINTS 32",
+      "description": "Alex Smith hits Vernon Davis on a 14-yard TD strike with 9 seconds left in one of the greatest NFL playoff games ever played.",
+      "youtubeId": "P6FfeHDrexE",
+      "player": "Vernon Davis",
+      "noEmbed": true
+    }
+  ]
+}
